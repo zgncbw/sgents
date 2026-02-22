@@ -1,0 +1,23 @@
+[project]
+name = "sgents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "autogen-agentchat>=0.7.5",
+    "autogen-ext[openai]>=0.7.5",
+    "keyring>=25.7.0",
+    "loguru>=0.7.3",
+    "questionary>=2.1.1",
+    "rich>=14.3.3",
+]
+
+[tool.pydocstyle]
+# 忽略中文文档字符串的句号检查
+add-ignore = [
+    "D400",  # First line should end with a period (中文用。)
+    "D401",  # First line should be in imperative mood (中文不需要)
+    "D404",  # First word should be capitalized (中文不需要)
+    "D415",  # First line should end with punctuation (中文用。)
+]
